@@ -100,3 +100,8 @@ try:
     linkList1.printList()
 except:
     print 'List does not contain index'
+    
+print 'Insert "test" at tail value'
+linkList1.insertAtValue("endEdge", "test")
+print "New list is:"
+linkList1.printList()
