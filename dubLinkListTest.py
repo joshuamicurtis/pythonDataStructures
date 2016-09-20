@@ -1,10 +1,10 @@
-from linkList2 import Node
-from linkList2 import LinkedList
+from dubLinkList import Node
+from dubLinkList import DubLinkedList
 
 def insertHeadTest():
     print ' '
     print 'Initializing linkList1'
-    linkList1 = LinkedList()
+    linkList1 = DubLinkedList()
     print 'Inserting "Begin" at head'
     linkList1.insertHead("Begin")
     print 'Size of linkList1:'
@@ -19,7 +19,7 @@ def insertHeadTest():
 def insertTailTest():
     print ' '
     print 'Initializing linkList2'
-    linkList2 = LinkedList()
+    linkList2 = DubLinkedList()
     print 'Inserting "End" at tail'
     linkList2.insertTail("End")
     print 'Size of linkList2:'
@@ -34,7 +34,7 @@ def insertTailTest():
 def insertHeadTailTest():
     print ' '
     print 'Initializing linkList3'
-    linkList3 = LinkedList()
+    linkList3 = DubLinkedList()
     print 'Inserting "Begin" at head'
     linkList3.insertHead("Begin")
     print 'Inserting "End" at tail'
@@ -52,7 +52,7 @@ def searchTest():
     print ' '
     print 'Testing search() and delete()'
     print 'Initializing linkList4'
-    linkList4 = LinkedList()
+    linkList4 = DubLinkedList()
     print 'Inserting "Begin" at head'
     linkList4.insertHead("Begin")
     print 'Inserting "End" at tail'
@@ -99,7 +99,7 @@ def insertAtIndexTest():
     print ' '
     print 'Testing insertAtIndex()'
     print 'Initializing linkList5'
-    linkList5 = LinkedList()
+    linkList5 = DubLinkedList()
     print 'Inserting "first" and "second" at head'
     linkList5.insertHead("first")
     linkList5.insertHead("second")
@@ -134,7 +134,7 @@ def insertAtValueTest():
     print ' '
     print 'Testing insertAtValue()'
     print 'Initializing linkList6'
-    linkList6 = LinkedList()
+    linkList6 = DubLinkedList()
     print 'Inserting "first" and "second" at head'
     linkList6.insertHead("first")
     linkList6.insertHead("second")
