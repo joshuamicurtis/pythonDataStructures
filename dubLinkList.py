@@ -30,7 +30,10 @@ class DubLinkedList(object):
         new_node.set_next(self.head)      
         if self.head is None:
             self.tail = new_node
+        else:
+            self.head.set_prev(new_node)
         self.head = new_node
+        
         
         #O(1) efficient!
     def insertTail(self, data):
@@ -91,9 +94,11 @@ class DubLinkedList(object):
     #O(n)
     def printList(self):
         current = self.head
-        while current:
-            print(current.get_data())
+        if current.get_data():
+            print current.get_data()
+        while current.get_next():
             current = current.get_next()
+            print(current.get_data())
         return None
         
     #O(n)
@@ -126,3 +131,13 @@ class DubLinkedList(object):
             self.head = current.get_next()
         else:
             previous.set_next(current.get_next())
+    
+    def delete_tail(self):
+        #print "tail data", self.tail.get_data()
+        if self.tail == None:
+            return False
+        previous = self.tail.get_prev()
+        #print "previous data", previous.get_data()
+        self.tail = previous
+        del self.tail.next_node 
+        self.tail.next_node = None
